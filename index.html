@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Creation Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #aaa;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .capabilities {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .capability {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .capability i {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .showcase {
+            padding: 80px 0;
+            background-color: #050505;
+        }
+
+        .showcase-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .showcase-subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .video-grid {
+            display: grid;
+            gap: 6rem;
+            margin-bottom: 6rem;
+        }
+
+        .video-item {
+            background: #0a0a0a;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #1a1a1a;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-4px);
+            border-color: #2a2a2a;
+        }
+
+        .video-content {
+            padding: 2rem;
+        }
+
+        .company-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .company-description {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: #888;
+            margin-top: 1rem;
+        }
+
+        .tech-badge i {
+            color: #fff;
+        }
+
+        .footer {
+            padding: 60px 0;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .capabilities {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .video-grid {
+                gap: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Video Creation</h1>
+            <p>
+                We built an AI system that researches, creates, and edits videos automatically. 
+                Our proprietary animation engine generates custom animations, clips existing content, 
+                and produces professional videos from any prompt.
+            </p>
+            <p style="color: #fff; font-size: 1.1rem;">
+                Currently exploring use cases in social media advertising, educational content, 
+                and automated news broadcasting.
+            </p>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container">
+            <h2 class="showcase-title">Demo Videos</h2>
+            <p class="showcase-subtitle">AI-generated advertisements created with our agent</p>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://projects.snappyvideo.ai/users/1/projects/34/bf3dba37-9c11-43aa-83e7-1729c6ae3d89.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <div class="company-info">
+                            <h3 class="company-name"><a href="https://soo.network/" target="_blank" style="color: inherit; text-decoration: none;">Soo Network <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.7;"></i></a></h3>
+                            <p class="company-description">
+                                Soo Network is building the most efficient blockchain rollup stack, powered by Decoupled SVM and built on the OP Stack. 
+                                Their technology aims to significantly improve performance and scalability for Ethereum and other blockchain networks.
+                            </p>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>AI-Generated Advertisement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://projects.snappyvideo.ai/users/1/projects/34/ecfacde7-a193-4106-bed3-94bcac4853e5.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <div class="company-info">
+                            <h3 class="company-name"><a href="https://thatch.ai/" target="_blank" style="color: inherit; text-decoration: none;">Thatch <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.7;"></i></a></h3>
+                            <p class="company-description">
+                                Thatch simplifies health benefits for startups and small businesses with personalized health insurance solutions. 
+                                Their platform helps companies offer competitive benefits packages while managing costs and compliance seamlessly.
+                            </p>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>AI-Generated Advertisement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://projects.snappyvideo.ai/users/1/projects/34/193c1644-18d5-4b0c-b2e9-31f481e493ec.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <div class="company-info">
+                            <h3 class="company-name"><a href="https://www.hellofranklin.co/" target="_blank" style="color: inherit; text-decoration: none;">Hello Franklin <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.7;"></i></a></h3>
+                            <p class="company-description">
+                                Hello Franklin is an AI-powered personal assistant that helps busy professionals manage their daily tasks and communications. 
+                                The platform integrates with existing workflows to automate scheduling, email management, and task prioritization.
+                            </p>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>AI-Generated Advertisement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>AI Video Creation Engine &middot; Pioneering Automated Content Generation</p>
+        </div>
+    </footer>
+</body>
+</html>
